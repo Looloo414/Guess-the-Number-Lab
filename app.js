@@ -27,11 +27,10 @@ const game = {
   },
 
   render: function(input){ // passed in guess argument
-     let result = input === this.secretNum ? alert(` Congrats! You guessed the number in ${this.prevGuesses.length} guesses!`)  
+     let result = (input === this.secretNum) ? alert(` Congrats! You guessed the number in ${this.prevGuesses.length} guesses!`)  
        : input < this.secretNum ? alert(`${input} was too low  Previous guesses:${this.prevGuesses.join(', ')}`) 
        : input > this.secretNum ? alert(`${input} was too high  Previous guesses:${this.prevGuesses.join(', ')}`)
-       : NaN; 
-
+       : 
        alert(result)
   }
 }
